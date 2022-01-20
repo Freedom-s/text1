@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轮播动画</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .lunbo {
+            height: 86px;
+            width: 378px;
+            border: 1px solid black;
+            margin: 200px auto;
+            overflow: hidden;
+            
+        }
+        .lunbo ul {
+            height: 100%;
+            width: 200%;
+            animation-name: move;
+            animation-duration: 3s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite; 
+        }
+        .lunbo li {
+            list-style: none;
+            float: left;
+        }
+        .lunbo ul:hover{
+            cursor: pointer;
+            animation-play-state: paused;
+        }
+        @keyframes move {
+            from {
+                transform: translate(0);
+            }
+            to {
+                transform: translate(-378px);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="lunbo">
+        <ul>
+            <li><img src="images/t-1.png" alt="" style="width: 126px; height: 86px;"></li>
+            <li><img src="images/t-2.jpg" alt="" style="width: 126px; height: 86px;"></li>
+            <li><img src="images/t-3.jpg" alt="" style="width: 126px; height: 86px;"></li>
+            <li><img src="images/t-1.png" alt="" style="width: 126px; height: 86px;"></li>
+            <li><img src="images/t-2.jpg" alt="" style="width: 126px; height: 86px;"></li>
+            <li><img src="images/t-3.jpg" alt="" style="width: 126px; height: 86px;"></li>
+        </ul>
+        
+        
+    </div>
+</body>
+</html>

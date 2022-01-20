@@ -1,0 +1,163 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+/* body{
+    display: flex;
+    flex-wrap: wrap;
+} */
+/* 平移 */
+.pingyi {
+    width: 33%;
+    height: 300px;
+    /* border: 1px solid black; */
+    position: relative;
+    float: left;
+    background-color: black;
+}
+.pingyi .wenzi {
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 2px;
+    left: 3px;
+    padding: 20px;
+}
+.wenzi h4 {
+    color: white;
+}
+.wenzi p {
+    background-color: white;
+    margin-top: 3px;
+    transform: translate(-120px);
+}
+.pingyi:hover img {
+    opacity: 0.7;
+    transition: opacity 2s ease;
+
+}
+.pingyi:hover .wenzi p:nth-of-type(1){
+    transform: translate(0);
+    transition: transform 1s ease;
+    -webkit-transition: transform 1s ease;
+}
+.pingyi:hover .wenzi p:nth-of-type(2){
+    transform: translate(0);
+    transition: transform 1s ease;
+    -webkit-transition: transform 1s ease 0.1s;
+}
+.pingyi:hover .wenzi p:nth-of-type(3){
+    transform: translate(0);
+    transition: transform 1s ease;
+    -webkit-transition: transform 1s ease 0.2s;
+}
+/* 旋转 */
+.xuanzhuan {
+    width: 33%;
+    height: 300px;
+    /* border: 1px solid black; */
+    float: left;
+    background-color: black;
+    position: relative;
+}
+.xuanzhuan .wenzi1 {
+    position: absolute;
+    top: 30px;
+    left: 70px;
+    
+}
+.xuanzhuan .wenzi1 h4 {
+    color: white;
+}
+.xuanzhuan .wenzi1 p {
+    color: white;
+    margin-top: 5px;
+    transform: translate(0,300px);
+    opacity: 0;
+}
+.xuanzhuan .kuang {
+    width: 80%;
+    height: 80%;
+    border: 2px solid black;
+    position: absolute;
+    top: 25px;
+    left: 50px;
+    transform: translate(0,-300px);
+}
+.xuanzhuan:hover p {
+    transform: translate(0);
+    transition: all 2s ease;
+    opacity: 1;
+}
+.xuanzhuan:hover img {
+    opacity: 0.7;
+    transition: opacity 2s ease;
+}
+.xuanzhuan:hover .kuang {
+    transform: translate(0) rotate(360deg);
+    transition: transform 2s ease;
+}
+
+/* 斜切 */
+.xieqie {
+    width: 33%;
+    height: 300px;
+    /* border: 1px solid black; */
+    float: left;
+    background-color: black;
+    position: relative;
+}
+.xieqie .wenzi2 {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    transform: skew(90deg,90deg);
+}
+.xieqie:hover .wenzi2 {
+    transform: skew(0);
+    
+    transition: all 2s ease;
+}
+.xieqie:hover img {
+    opacity: 0.7;
+    transition: all 2s ease;
+}
+/* 缩放 */
+.suofang {
+    width: 33%;
+    height: 300px;
+    /* border: 1px solid black; */
+    float: left;
+    background-color: black;
+    position: relative;
+}
+.wenzi3 {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    display: none;
+}
+.suofang:hover .wenzi3{
+    display: block;
+}
+.suofang .kuang1 {
+    width: 90%;
+    height: 90%;
+    border: 2px solid white;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    visibility: hidden;
+    transform: scale(1,1);
+}
+.suofang:hover .kuang1 {
+    visibility: visible;
+    transform: scale(0.85,0.85);
+    transition: all 2s ease;
+    
+}
+.suofang:hover  img {
+    transform: scale(1.2,1.2);
+    transition: all 2s ease;
+    opacity: 0.7;
+
+}
